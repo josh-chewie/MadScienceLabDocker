@@ -1,7 +1,7 @@
-FROM ruby:2.7.1-alpine3.11
+FROM ruby:3.0.4-alpine3.16
 
-MAINTAINER Michael Karlesky <michael@karlesky.net>
-
+RUN apk update \
+    apk upgrade
 
 RUN apk --no-cache add \
   coreutils \
@@ -9,7 +9,6 @@ RUN apk --no-cache add \
   gcovr \
   valgrind \
   libc-dev
-
 
 ##
 ## Copy assets for inclusion in image
