@@ -3,6 +3,8 @@ FROM ruby:3.0.4-alpine3.16
 RUN apk update \
     apk upgrade
 
+RUN apk add --no-cache --upgrade bash
+
 RUN apk --no-cache add \
   coreutils \
   gcc \
